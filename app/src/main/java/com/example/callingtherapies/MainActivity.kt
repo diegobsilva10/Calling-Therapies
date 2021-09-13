@@ -18,13 +18,16 @@ class MainActivity : DebugActivity2() {
             val nome_usuario =  campo_usuario.text.toString()
 
             var intent = Intent (this, TelaInicialActivity::class.java)
-            startActivity(intent)
-            val params = Bundle()
-            params.putString("nome_pessoa", "Diego")
 
+
+            val params = Bundle()
+            params.putString("nome_pessoa","Diego")
             intent.putExtras(params)
 
-            intent.putExtra("nome_usuario", nome_usuario)
+
+
+
+            startActivity(intent)
         }
 
     }
