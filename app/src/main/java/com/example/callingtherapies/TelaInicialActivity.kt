@@ -11,12 +11,10 @@ class TelaInicialActivity : DebugActivity2() {
         setContentView(R.layout.activity_tela_inicial)
 
         val args = intent.extras
-        val nome_pessoa = args?.getString("nome_pessoa")
-        Toast.makeText(this, "Bem Vindo:  $nome_pessoa", Toast.LENGTH_SHORT).show()
-
+        val nome_usuario2 = args?.getString("nome_usuario")
+        Toast.makeText(this, "Bem Vindo: $nome_usuario2", Toast.LENGTH_SHORT).show()
         val nome_usuario = args?.getString("nome_usuario")
         mensagemTelaInicial.text = nome_usuario
-
 
     }
 }

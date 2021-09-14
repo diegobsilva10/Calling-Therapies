@@ -15,15 +15,16 @@ class MainActivity : DebugActivity2() {
         val button: Button = findViewById(R.id.botao_login)
         button.setOnClickListener {
             Toast.makeText(this,"Logando Usuario",Toast.LENGTH_SHORT).show()
-            val nome_usuario =  campo_usuario.text.toString()
+            val nome_usuario = campo_usuario.text.toString()
 
             var intent = Intent (this, TelaInicialActivity::class.java)
 
 
-            val params = Bundle()
-            params.putString("nome_pessoa","Diego")
-            intent.putExtras(params)
+//            val params = Bundle()
+//            params.putString("nome_pessoa","Diego")
+//            intent.putExtras(params)
 
+            intent.putExtra("nome_usuario", nome_usuario)
 
 
 
