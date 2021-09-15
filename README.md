@@ -1,7 +1,7 @@
 # Calling-Therapies
 
 
-Repositório para matéria de Desenvolvimento Web.
+Repositório para matéria de Desenvolvimento Android.
 
 
 GRUPO Panelinha
