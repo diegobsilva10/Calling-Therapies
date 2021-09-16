@@ -20,13 +20,7 @@ class MainActivity : DebugActivity2() {
             var intent = Intent (this, TelaInicialActivity::class.java)
 
 
-//            val params = Bundle()
-//            params.putString("nome_pessoa","Diego")
-//            intent.putExtras(params)
-
             intent.putExtra("nome_usuario", nome_usuario)
-
-
 
             startActivity(intent)
         }
