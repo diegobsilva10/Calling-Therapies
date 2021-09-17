@@ -71,6 +71,7 @@ class TelaInicialActivity : DebugActivity2() {
             startActivity(intent)
         } else if (id == R.id.action_configuracoes) {
             Toast.makeText(this, "Configurações", Toast.LENGTH_LONG).show()
+            //INTENT CRIADA PARA MUDAR DE PAGINA AO CLICAR NO BOTÃO
             val intent = Intent(this, ConfiguracoesActivity::class.java)
             // colocar parâmetros (opcional)
             val params = Bundle()
