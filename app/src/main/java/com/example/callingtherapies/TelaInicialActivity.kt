@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.toolbar.*
 class TelaInicialActivity : DebugActivity2() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tela_inicial)
+        setContentView(R.layout.testandolayout)
 
         val args = intent.extras
         val nome_usuario2 = args?.getString("nome_usuario")
@@ -22,7 +22,6 @@ class TelaInicialActivity : DebugActivity2() {
 
         //IMPLEMENTA A TOOLBAR CRIADA
         setSupportActionBar(toolbar)
-
         // alterar título da ActionBar
         //supportActionBar?.title = "Disciplinas"
 
@@ -85,6 +84,8 @@ class TelaInicialActivity : DebugActivity2() {
         }
         return super.onOptionsItemSelected(item)
     }
+
+
 
 
 }
