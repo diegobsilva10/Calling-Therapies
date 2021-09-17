@@ -10,14 +10,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CallingTherapies">
         <activity
-            android:name=".TelaInicialActivity" android:theme="@style/AppTheme.Toolbar"
-            android:exported="true" />
+            android:name=".ConfiguracoesActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme.Toolbar"/>
+        <activity
+            android:name=".CadastroActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme.Toolbar" />
+        <activity
+            android:name=".TelaInicialActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme.Toolbar" />
         <activity
             android:name=".DebugActivity2"
             android:exported="true" />
         <activity
-            android:name=".MainActivity" android:theme="@style/AppTheme.Toolbar"
-            android:exported="true">
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme.Toolbar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

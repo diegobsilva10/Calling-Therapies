@@ -1,6 +1,6 @@
 package com.example.callingtherapies
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -34,7 +34,7 @@ class TelaInicialActivity : DebugActivity2() {
     // método sobrescrito para inflar o menu na Actionbar
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         // infla o menu com os botões da ActionBar
-        menuInflater.inflate(R.menu.menu_main, menu)
+        menuInflater.inflate(R.menu.bottom_menu_main, menu)
         // vincular evento de buscar
         (menu?.findItem(R.id.action_buscar)?.actionView as SearchView?)?.setOnQueryTextListener(
             object : SearchView.OnQueryTextListener {
@@ -62,8 +62,21 @@ class TelaInicialActivity : DebugActivity2() {
             Toast.makeText(this, "Buscar", Toast.LENGTH_LONG).show()
         } else if (id == R.id.action_adicionar_produtos) {
             Toast.makeText(this, "Adicionar Produtos", Toast.LENGTH_LONG).show()
+            // criar intent
+            val intent = Intent(this, CadastroActivity::class.java)
+            // colocar parâmetros (opcional)
+            val params = Bundle()
+            intent.putExtras(params)
+            // fazer a chamada
+            startActivity(intent)
         } else if (id == R.id.action_configuracoes) {
             Toast.makeText(this, "Configurações", Toast.LENGTH_LONG).show()
+            val intent = Intent(this, ConfiguracoesActivity::class.java)
+            // colocar parâmetros (opcional)
+            val params = Bundle()
+            intent.putExtras(params)
+            // fazer a chamada
+            startActivity(intent)
         }
         // botão up navigation
         else if (id == android.R.id.home) {
