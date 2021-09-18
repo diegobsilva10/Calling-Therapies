@@ -7,6 +7,7 @@ import android.view.MenuItem
 import android.widget.Button
 import android.widget.SearchView
 import android.widget.Toast
+import com.example.callingtherapies.databinding.ActivityAgendeJaBinding
 import kotlinx.android.synthetic.main.activity_tela_inicial.*
 import kotlinx.android.synthetic.main.login.*
 import kotlinx.android.synthetic.main.toolbar.*
@@ -15,6 +16,7 @@ class TelaInicialActivity : DebugActivity2() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.tela_inicial2)
+
 
         val args = intent.extras
         val nome_usuario2 = args?.getString("nome_usuario")
@@ -59,16 +61,15 @@ class TelaInicialActivity : DebugActivity2() {
 
 
         }
-        //AÇÃO DE BOTÃO DE AGENDA
-        val buttonAgenda: Button = findViewById(R.id.botao2)
-        buttonAgenda.setOnClickListener {
+        val buttonAgende: Button = findViewById(R.id.botao3)
+        buttonAgende.setOnClickListener {
 
 //            //EXIBE MENSAGEM NA TELA
 //            Toast.makeText(this,"Produtos",Toast.LENGTH_SHORT).show()
 
 
             //INTENT CRIADA PARA MUDAR PARA A ACTIVITY PRODUTO AO CLICAR NO BOTÃO
-            var intent = Intent(this, ActivityTratamentos::class.java)
+            var intent = Intent(this, AgendeJaActivity::class.java)
             intent.putExtra("nome_usuario", nome_usuario)
             startActivity(intent)
 
