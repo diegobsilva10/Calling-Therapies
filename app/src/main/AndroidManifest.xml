@@ -10,9 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CallingTherapies">
         <activity
+            android:name=".ActivityTratamentos"
+            android:exported="true"
+            android:theme="@style/AppTheme.Toolbar" />
+        <activity
+            android:name=".ActivityProduto"
+            android:exported="true"
+            android:theme="@style/AppTheme.Toolbar" />
+        <activity
             android:name=".ConfiguracoesActivity"
             android:exported="true"
-            android:theme="@style/AppTheme.Toolbar"/>
+            android:theme="@style/AppTheme.Toolbar" />
         <activity
             android:name=".CadastroActivity"
             android:exported="true"
