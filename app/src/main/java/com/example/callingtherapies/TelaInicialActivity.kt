@@ -17,6 +17,7 @@ import kotlinx.android.synthetic.main.activity_tela_inicial.mensagemTelaInicial
 import kotlinx.android.synthetic.main.login.*
 import kotlinx.android.synthetic.main.tela_inicial2.*
 import kotlinx.android.synthetic.main.toolbar.*
+import kotlin.concurrent.thread
 
 class TelaInicialActivity : DebugActivity2() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -81,7 +82,17 @@ class TelaInicialActivity : DebugActivity2() {
         finish();
     }
     fun criarProgressBar(){
-        val ProgressBar: ProgressBar = findViewById(R.id.progressBar)
+        Toast.makeText(this, "Atualizando", Toast.LENGTH_LONG).show()
+        progressbar.visibility = View.VISIBLE
+        progressbar.max = 1000
+        val currentProgress = 600
+
+        ObjectAnimator.ofInt(progressbar, "progress", currentProgress)
+            .setDuration(1000)
+            .start()
+            if(progressbar.max <= 100){
+                progressbar.visibility = View.GONE
+        }
     }
 
     // método sobrescrito para inflar o menu na Actionbar
@@ -91,6 +102,7 @@ class TelaInicialActivity : DebugActivity2() {
         // vincular evento de buscar
         (menu?.findItem(R.id.action_buscar)?.actionView as SearchView?)?.setOnQueryTextListener(
             object : SearchView.OnQueryTextListener {
+
 
                 override fun onQueryTextChange(newText: String): Boolean {
                     // ação enquanto está digitando
@@ -114,15 +126,8 @@ class TelaInicialActivity : DebugActivity2() {
         // a comparação é feita com o recurso de id definido no xml
 
         if (id == R.id.action_atualizar) {
-            Toast.makeText(this, "Atualizando", Toast.LENGTH_LONG).show()
-            progressbar.visibility = View.VISIBLE
-            progressbar.max = 10000
-            progressbar.min = 10000
-            val currentProgress = 600
+            criarProgressBar()
 
-            ObjectAnimator.ofInt(progressbar, "progress", currentProgress)
-                .setDuration(10000)
-                .start()
         } else if (id == R.id.action_adicionar_produtos) {
             Toast.makeText(this, "Adicionar Produtos", Toast.LENGTH_SHORT).show()
             // criar intent
