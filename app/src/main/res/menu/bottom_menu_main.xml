@@ -7,20 +7,24 @@
         android:title="Buscar"
         app:showAsAction="always"
         />
+
+
     <item android:id="@+id/action_atualizar"
         android:icon="@drawable/ic_atualizar_white"
         android:title="Atualizar"
         app:showAsAction="always"
         />
+
+
     <item android:id="@+id/action_adicionar_produtos"
         android:icon="@drawable/icons8_carrinho_de_compras_50"
         android:title="Adicionar Produto"
         app:showAsAction="always"
         />
+
     <item android:id="@+id/action_configuracoes"
         android:icon="@drawable/ic_configuracoes_white"
         android:title="Configurações"
         app:showAsAction="ifRoom"
         />
-
 </menu>

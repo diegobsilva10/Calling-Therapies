@@ -1,15 +1,21 @@
 package com.example.callingtherapies
 
+import android.animation.ObjectAnimator
+import android.annotation.SuppressLint
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.Button
+import android.widget.ProgressBar
 import android.widget.SearchView
 import android.widget.Toast
-import com.example.callingtherapies.databinding.ActivityAgendeJaBinding
-import kotlinx.android.synthetic.main.activity_tela_inicial.*
+
+import kotlinx.android.synthetic.main.activity_tela_inicial.mensagemTelaInicial
 import kotlinx.android.synthetic.main.login.*
+import kotlinx.android.synthetic.main.tela_inicial2.*
 import kotlinx.android.synthetic.main.toolbar.*
 
 class TelaInicialActivity : DebugActivity2() {
@@ -17,27 +23,24 @@ class TelaInicialActivity : DebugActivity2() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.tela_inicial2)
 
+        progressbar.visibility = View.GONE
+
 
         val args = intent.extras
         val nome_usuario2 = args?.getString("nome_usuario")
         Toast.makeText(this, "Bem Vindo: $nome_usuario2", Toast.LENGTH_SHORT).show()
         val nome_usuario = args?.getString("nome_usuario")
+
+
         mensagemTelaInicial.text = nome_usuario
         //IMPLEMENTA A TOOLBAR CRIADA
         setSupportActionBar(toolbar)
-        // alterar título da ActionBar
-        //supportActionBar?.title = "Disciplinas"
 
-        // up navigation
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        //EVENTOS DE CLICK ATRAVÉS DO ID DO BOTÃO LOGIN (ID LOCALIZADO tela_inicial2.xml)
-        //AÇÃO DE BOTÃO DO PRODUTOS
+        //EVENTOS DE CLICK ATRAVÉS DO ID DO BOTÃO (ID LOCALIZADO tela_inicial2.xml)
         val buttonProduto: Button = findViewById(R.id.botao1)
         buttonProduto.setOnClickListener {
 
-//            //EXIBE MENSAGEM NA TELA
-//            Toast.makeText(this,"Produtos",Toast.LENGTH_SHORT).show()
 
 
             //INTENT CRIADA PARA MUDAR PARA A ACTIVITY PRODUTO AO CLICAR NO BOTÃO
@@ -50,10 +53,6 @@ class TelaInicialActivity : DebugActivity2() {
         val buttonTratamentos: Button = findViewById(R.id.botao2)
         buttonTratamentos.setOnClickListener {
 
-//            //EXIBE MENSAGEM NA TELA
-//            Toast.makeText(this,"Produtos",Toast.LENGTH_SHORT).show()
-
-
             //INTENT CRIADA PARA MUDAR PARA A ACTIVITY PRODUTO AO CLICAR NO BOTÃO
             var intent = Intent(this, ActivityTratamentos::class.java)
             intent.putExtra("nome_usuario", nome_usuario)
@@ -64,17 +63,25 @@ class TelaInicialActivity : DebugActivity2() {
         val buttonAgende: Button = findViewById(R.id.botao3)
         buttonAgende.setOnClickListener {
 
-//            //EXIBE MENSAGEM NA TELA
-//            Toast.makeText(this,"Produtos",Toast.LENGTH_SHORT).show()
-
-
             //INTENT CRIADA PARA MUDAR PARA A ACTIVITY PRODUTO AO CLICAR NO BOTÃO
             var intent = Intent(this, AgendeJaActivity::class.java)
             intent.putExtra("nome_usuario", nome_usuario)
             startActivity(intent)
 
-
         }
+        val buttonSair :  Button = findViewById(R.id.botao_sair)
+        buttonSair.setOnClickListener {cliqueSair(botao_sair)}
+    }
+
+
+    fun cliqueSair(botao_sair: Button) {
+        val returnIntent = Intent(this, MainActivity::class.java);
+        returnIntent.putExtra("result","Saída do BrewerApp");
+        setResult(Activity.RESULT_OK,returnIntent);
+        finish();
+    }
+    fun criarProgressBar(){
+        val ProgressBar: ProgressBar = findViewById(R.id.progressBar)
     }
 
     // método sobrescrito para inflar o menu na Actionbar
@@ -99,15 +106,24 @@ class TelaInicialActivity : DebugActivity2() {
         return true
     }
 
+    @SuppressLint("ResourceType")
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         // id do item clicado
         val id = item?.itemId
         // verificar qual item foi clicado e mostrar a mensagem Toast na tela
         // a comparação é feita com o recurso de id definido no xml
-        if (id == R.id.action_buscar) {
+
+        if (id == R.id.action_atualizar) {
             Toast.makeText(this, "Buscar", Toast.LENGTH_LONG).show()
+            progressbar.visibility = View.VISIBLE
+            progressbar.max = 10
+            val currentProgress = 600
+
+            ObjectAnimator.ofInt(progressbar, "progress", currentProgress)
+                .setDuration(10)
+                .start()
         } else if (id == R.id.action_adicionar_produtos) {
-            Toast.makeText(this, "Adicionar Produtos", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Adicionar Produtos", Toast.LENGTH_SHORT).show()
             // criar intent
             val intent = Intent(this, CadastroActivity::class.java)
             // colocar parâmetros (opcional)
@@ -116,7 +132,7 @@ class TelaInicialActivity : DebugActivity2() {
             // fazer a chamada
             startActivity(intent)
         } else if (id == R.id.action_configuracoes) {
-            Toast.makeText(this, "Configurações", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Configurações", Toast.LENGTH_SHORT).show()
             //INTENT CRIADA PARA MUDAR DE PAGINA AO CLICAR NO BOTÃO
             val intent = Intent(this, ConfiguracoesActivity::class.java)
             // colocar parâmetros (opcional)
@@ -124,15 +140,14 @@ class TelaInicialActivity : DebugActivity2() {
             intent.putExtras(params)
             // fazer a chamada
             startActivity(intent)
+        }else if (id ==R.id.action_atualizar){
+            Toast.makeText(this, "Atualizando", Toast.LENGTH_SHORT).show()
         }
-        // botão up navigation
-        else if (id == android.R.id.home) {
-            finish()
-        }
+
+
         return super.onOptionsItemSelected(item)
     }
 
 
-
-
 }
+

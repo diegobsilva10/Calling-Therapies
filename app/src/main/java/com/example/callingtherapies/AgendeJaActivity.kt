@@ -1,5 +1,6 @@
 package com.example.callingtherapies
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -9,9 +10,10 @@ import android.view.MenuItem
 import android.widget.Button
 import android.widget.SearchView
 import android.widget.Toast
+import kotlinx.android.synthetic.main.tela_inicial2.*
 import kotlinx.android.synthetic.main.toolbar.*
 
-class AgendeJaActivity :  AppCompatActivity()  {
+class AgendeJaActivity :  DebugActivity2()  {
     private val context: Context get() = this
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +26,7 @@ class AgendeJaActivity :  AppCompatActivity()  {
 
         // up navigation
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
 
 
         //EVENTOS DE CLICK ATRAVÉS DO ID DO BOTÃO LOGIN (ID LOCALIZADO tela_inicial2.xml)
@@ -57,21 +60,8 @@ class AgendeJaActivity :  AppCompatActivity()  {
 
 
         }
-        val buttonAgende: Button = findViewById(R.id.botao3)
-        buttonAgende.setOnClickListener {
-
-//            //EXIBE MENSAGEM NA TELA
-//            Toast.makeText(this,"Produtos",Toast.LENGTH_SHORT).show()
-
-
-            //INTENT CRIADA PARA MUDAR PARA A ACTIVITY PRODUTO AO CLICAR NO BOTÃO
-            var intent = Intent(this, AgendeJaActivity::class.java)
-
-            startActivity(intent)
-
-
-        }
     }
+
 
     // método sobrescrito para inflar o menu na Actionbar
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

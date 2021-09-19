@@ -1,23 +1,37 @@
 package com.example.callingtherapies
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Button
 import android.widget.SearchView
 import android.widget.Toast
+import com.example.callingtherapies.R.id.botaoSairCadastro
 import kotlinx.android.synthetic.main.toolbar.*
 
 class CadastroActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_cadastro)
+        setContentView(R.layout.layoutcadastro)
         setSupportActionBar(toolbar)
         // alterar título da ActionBar
         supportActionBar?.title = "Cadastro de Usuário"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        val buttonSair: Button = findViewById(botaoSairCadastro)
+        buttonSair.setOnClickListener {cliqueSair(botaoSairCadastro)}
     }
+    fun cliqueSair(botao_sair: Int) {
+        val returnIntent = Intent(this, MainActivity::class.java);
+        returnIntent.putExtra("result","Saída do BrewerApp");
+        setResult(Activity.RESULT_OK,returnIntent);
+        finish();
+    }
+
+
 
 
     // método sobrescrito para inflar o menu na Actionbar

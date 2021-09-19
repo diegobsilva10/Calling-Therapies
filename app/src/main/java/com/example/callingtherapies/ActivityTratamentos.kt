@@ -1,5 +1,6 @@
 package com.example.callingtherapies
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,6 +9,7 @@ import android.view.MenuItem
 import android.widget.Button
 import android.widget.SearchView
 import android.widget.Toast
+import kotlinx.android.synthetic.main.tela_inicial2.*
 import kotlinx.android.synthetic.main.toolbar.*
 
 class ActivityTratamentos : AppCompatActivity() {
@@ -39,21 +41,6 @@ class ActivityTratamentos : AppCompatActivity() {
         }
 
 
-        //AÇÃO DE BOTÃO DO TRATAMENTO
-        val buttonTratamentos: Button = findViewById(R.id.botao2)
-        buttonTratamentos.setOnClickListener {
-
-//            //EXIBE MENSAGEM NA TELA
-//            Toast.makeText(this,"Produtos",Toast.LENGTH_SHORT).show()
-
-
-            //INTENT CRIADA PARA MUDAR PARA A ACTIVITY PRODUTO AO CLICAR NO BOTÃO
-            var intent = Intent(this, ActivityTratamentos::class.java)
-
-            startActivity(intent)
-
-
-        }
         val buttonAgende: Button = findViewById(R.id.botao3)
         buttonAgende.setOnClickListener {
 
@@ -65,11 +52,16 @@ class ActivityTratamentos : AppCompatActivity() {
             var intent = Intent(this, AgendeJaActivity::class.java)
 
             startActivity(intent)
-
-
         }
+        val buttonSair :  Button = findViewById(R.id.botao_sair)
+        buttonSair.setOnClickListener {cliqueSair(botao_sair)}
     }
-    // método sobrescrito para inflar o menu na Actionbar
+    fun cliqueSair(botao_sair: Button) {
+        val returnIntent = Intent(this, MainActivity::class.java);
+        returnIntent.putExtra("result", "Saída do BrewerApp");
+        setResult(Activity.RESULT_OK, returnIntent);
+        finish()
+    }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         // infla o menu com os botões da ActionBar
         menuInflater.inflate(R.menu.bottom_menu_main, menu)

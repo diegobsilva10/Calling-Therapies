@@ -1,5 +1,6 @@
 package com.example.callingtherapies
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,6 +9,7 @@ import android.view.MenuItem
 import android.widget.Button
 import android.widget.SearchView
 import android.widget.Toast
+import kotlinx.android.synthetic.main.tela_inicial2.*
 import kotlinx.android.synthetic.main.toolbar.*
 
 class ActivityProduto : AppCompatActivity() {
@@ -23,16 +25,8 @@ class ActivityProduto : AppCompatActivity() {
         // up navigation
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         //EVENTOS DE CLICK ATRAVÉS DO ID DO BOTÃO LOGIN (ID LOCALIZADO tela_inicial2.xml)
-        //AÇÃO DE BOTÃO DO PRODUTOS
-        val buttonProduto: Button = findViewById(R.id.botao1)
-        buttonProduto.setOnClickListener {
 
 
-            //INTENT CRIADA PARA MUDAR PARA A ACTIVITY PRODUTO AO CLICAR NO BOTÃO
-            var intent = Intent(this, ActivityProduto::class.java)
-
-            startActivity(intent)
-        }
 
 
         //AÇÃO DE BOTÃO DO TRATAMENTO
@@ -62,9 +56,18 @@ class ActivityProduto : AppCompatActivity() {
 
             startActivity(intent)
 
-
         }
+        val buttonSair :  Button = findViewById(R.id.botao_sair)
+        buttonSair.setOnClickListener {cliqueSair(botao_sair)}
     }
+    fun cliqueSair(botao_sair: Button) {
+        val returnIntent = Intent(this, MainActivity::class.java);
+        returnIntent.putExtra("result","Saída do BrewerApp");
+        setResult(Activity.RESULT_OK,returnIntent);
+        onDestroy()
+    }
+
+
     // método sobrescrito para inflar o menu na Actionbar
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         // infla o menu com os botões da ActionBar
