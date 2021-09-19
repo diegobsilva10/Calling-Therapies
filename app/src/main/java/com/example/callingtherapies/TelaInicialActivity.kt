@@ -114,13 +114,14 @@ class TelaInicialActivity : DebugActivity2() {
         // a comparação é feita com o recurso de id definido no xml
 
         if (id == R.id.action_atualizar) {
-            Toast.makeText(this, "Buscar", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Atualizando", Toast.LENGTH_LONG).show()
             progressbar.visibility = View.VISIBLE
-            progressbar.max = 10
+            progressbar.max = 10000
+            progressbar.min = 10000
             val currentProgress = 600
 
             ObjectAnimator.ofInt(progressbar, "progress", currentProgress)
-                .setDuration(10)
+                .setDuration(10000)
                 .start()
         } else if (id == R.id.action_adicionar_produtos) {
             Toast.makeText(this, "Adicionar Produtos", Toast.LENGTH_SHORT).show()
@@ -140,8 +141,8 @@ class TelaInicialActivity : DebugActivity2() {
             intent.putExtras(params)
             // fazer a chamada
             startActivity(intent)
-        }else if (id ==R.id.action_atualizar){
-            Toast.makeText(this, "Atualizando", Toast.LENGTH_SHORT).show()
+        }else if (id ==R.id.action_buscar){
+            Toast.makeText(this, "buscando", Toast.LENGTH_SHORT).show()
         }
 
 
