@@ -2,11 +2,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item android:id="@+id/action_buscar"
-        android:icon="@drawable/ic_buscar_white"
-        android:title="Buscar"
-        app:showAsAction="always"
-        />
 
 
     <item android:id="@+id/action_atualizar"
@@ -14,6 +9,14 @@
         android:title="Atualizar"
         app:showAsAction="always"
         />
+
+
+    <item
+        android:id="@+id/action_buscar"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="Search"
+        app:actionViewClass="android.widget.SearchView"
+        app:showAsAction="always" />
 
 
     <item android:id="@+id/action_adicionar_produtos"
