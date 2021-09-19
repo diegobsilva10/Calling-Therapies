@@ -76,10 +76,10 @@ class TelaInicialActivity : DebugActivity2() {
 
 
     fun cliqueSair(botao_sair: Button) {
+        finish();
         val returnIntent = Intent(this, MainActivity::class.java);
         returnIntent.putExtra("result","Saída do BrewerApp");
         setResult(Activity.RESULT_OK,returnIntent);
-        finish();
     }
     fun criarProgressBar(){
         Toast.makeText(this, "Atualizando", Toast.LENGTH_LONG).show()
@@ -110,7 +110,7 @@ class TelaInicialActivity : DebugActivity2() {
                 }
 
                 override fun onQueryTextSubmit(query: String): Boolean {
-                    // ação  quando terminou de buscar e enviou
+
                     return false
                 }
 
@@ -146,10 +146,7 @@ class TelaInicialActivity : DebugActivity2() {
             intent.putExtras(params)
             // fazer a chamada
             startActivity(intent)
-        }else if (id ==R.id.action_buscar){
-            Toast.makeText(this, "buscando", Toast.LENGTH_SHORT).show()
         }
-
 
         return super.onOptionsItemSelected(item)
     }
