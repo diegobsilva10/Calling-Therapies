@@ -64,8 +64,11 @@ class ActivityProduto : AppCompatActivity() {
         val returnIntent = Intent(this, MainActivity::class.java);
         returnIntent.putExtra("result","Saída do BrewerApp");
         setResult(Activity.RESULT_OK,returnIntent);
-        onDestroy()
+        finish()
+
     }
+
+
 
 
     // método sobrescrito para inflar o menu na Actionbar
