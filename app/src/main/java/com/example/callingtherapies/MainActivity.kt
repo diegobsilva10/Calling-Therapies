@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.view.View
 import android.widget.*
 import kotlinx.android.synthetic.main.login.*
-import kotlinx.android.synthetic.main.login.progressBar
 import kotlinx.android.synthetic.main.tela_inicial2.*
 
 class MainActivity : DebugActivity2() {
@@ -20,14 +19,23 @@ class MainActivity : DebugActivity2() {
         val button: Button = findViewById(R.id.botao_login)
         button.setOnClickListener {
 
-            //EXIBE MENSAGEM NA TELA
-            Toast.makeText(this,"Logando Usuario",Toast.LENGTH_SHORT).show()
-            val nome_usuario = campo_usuario.text.toString()
 
-            //INTENT CRIADA PARA MUDAR DE PAGINA AO CLICAR NO BOTÃO
-            var intent = Intent (this, TelaInicialActivity::class.java)
-            intent.putExtra("nome_usuario", nome_usuario)
-            startActivity(intent)
+
+            val nome_usuario = campo_usuario.text.toString()
+            val senha = campo_senha.text.toString()
+
+            if (nome_usuario == "aluno" && senha == "impacta"){
+                //INTENT CRIADA PARA MUDAR DE PAGINA AO CLICAR NO BOTÃO
+                var intent = Intent (this, TelaInicialActivity::class.java)
+                //EXIBE MENSAGEM NA TELA
+                Toast.makeText(this,"Logando Usuario",Toast.LENGTH_SHORT).show()
+                intent.putExtra("nome_usuario", nome_usuario)
+                startActivity(intent)
+
+            }else{
+                Toast.makeText(this,"Usuario ou Senha Incorreto",Toast.LENGTH_SHORT).show()
+            }
+
         }
 
     }
