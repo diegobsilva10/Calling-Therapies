@@ -8,23 +8,28 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.Button
-import android.widget.ProgressBar
-import android.widget.SearchView
-import android.widget.Toast
+import android.view.View.VISIBLE
+import android.widget.*
 
 import kotlinx.android.synthetic.main.activity_tela_inicial.mensagemTelaInicial
 import kotlinx.android.synthetic.main.login.*
 import kotlinx.android.synthetic.main.tela_inicial2.*
 import kotlinx.android.synthetic.main.toolbar.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Dispatchers.Main
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import java.util.*
 import kotlin.concurrent.thread
 
 class TelaInicialActivity : DebugActivity2() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.tela_inicial2)
-
         progressbar.visibility = View.GONE
+
+
 
 
         val args = intent.extras
@@ -42,12 +47,11 @@ class TelaInicialActivity : DebugActivity2() {
         val buttonProduto: Button = findViewById(R.id.botao1)
         buttonProduto.setOnClickListener {
 
-
-
             //INTENT CRIADA PARA MUDAR PARA A ACTIVITY PRODUTO AO CLICAR NO BOTÃO
             var intent = Intent(this, ActivityProduto::class.java)
             intent.putExtra("nome_usuario", nome_usuario)
             startActivity(intent)
+
         }
 
         //AÇÃO DE BOTÃO DO TRATAMENTO
@@ -70,30 +74,46 @@ class TelaInicialActivity : DebugActivity2() {
             startActivity(intent)
 
         }
-        val buttonSair :  Button = findViewById(R.id.botao_sair)
-        buttonSair.setOnClickListener {cliqueSair(botao_sair)}
+        val buttonSair: Button = findViewById(R.id.botao_sair)
+        buttonSair.setOnClickListener { cliqueSair(botao_sair) }
+
+    }
+
+    fun criarProgressBar(){
+        Toast.makeText(this, "Atualizando", Toast.LENGTH_LONG).show()
+        progressbar.visibility = View.VISIBLE
+        val currentProgress = 600
+        ObjectAnimator.ofInt(progressbar, "progress", currentProgress)
+            .start()
+
+
+
+    }
+
+    fun offProgressBar(){
+        Thread.sleep(1000)
+        progressbar.visibility = View.GONE
     }
 
 
     fun cliqueSair(botao_sair: Button) {
-        finish();
         val returnIntent = Intent(this, MainActivity::class.java);
-        returnIntent.putExtra("result","Saída do BrewerApp");
-        setResult(Activity.RESULT_OK,returnIntent);
+        returnIntent.putExtra("result", "Saída do BrewerApp");
+        setResult(Activity.RESULT_OK, returnIntent);
     }
-    fun criarProgressBar(){
-        Toast.makeText(this, "Atualizando", Toast.LENGTH_LONG).show()
-        progressbar.visibility = View.VISIBLE
-        progressbar.max = 1000
-        val currentProgress = 600
 
-        ObjectAnimator.ofInt(progressbar, "progress", currentProgress)
-            .setDuration(1000)
-            .start()
-            if(progressbar.max <= 100){
-                progressbar.visibility = View.GONE
-        }
-    }
+
+
+
+
+
+
+
+
+
+
+
+
 
     // método sobrescrito para inflar o menu na Actionbar
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -118,6 +138,7 @@ class TelaInicialActivity : DebugActivity2() {
         return true
     }
 
+
     @SuppressLint("ResourceType")
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         // id do item clicado
@@ -126,7 +147,21 @@ class TelaInicialActivity : DebugActivity2() {
         // a comparação é feita com o recurso de id definido no xml
 
         if (id == R.id.action_atualizar) {
-            criarProgressBar()
+            GlobalScope.launch(context =  Dispatchers.Main) {
+                criarProgressBar()
+
+
+            }
+
+            GlobalScope.launch(context = Dispatchers.Main){
+
+
+
+
+            }
+
+
+
 
         } else if (id == R.id.action_adicionar_produtos) {
             Toast.makeText(this, "Adicionar Produtos", Toast.LENGTH_SHORT).show()
@@ -137,6 +172,7 @@ class TelaInicialActivity : DebugActivity2() {
             intent.putExtras(params)
             // fazer a chamada
             startActivity(intent)
+
         } else if (id == R.id.action_configuracoes) {
             Toast.makeText(this, "Configurações", Toast.LENGTH_SHORT).show()
             //INTENT CRIADA PARA MUDAR DE PAGINA AO CLICAR NO BOTÃO
@@ -149,6 +185,10 @@ class TelaInicialActivity : DebugActivity2() {
         }
 
         return super.onOptionsItemSelected(item)
+    }
+
+    private fun <T> findViewById(pb: ProgressBar?) {
+
     }
 
 
