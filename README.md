@@ -1,7 +1,11 @@
 
 <h2>Calling-Therapies</h2>
 <h3>📔 Informações sobre o projeto</h3>
-O projeto <b>Calling-Therapies</b>  é um aplicativo que está em desenvolvimento para o TCC da faculdade, o projeto é com foco em uma empresa que realiza tratamento com ozonioterapia. O objetivo do aplicativo é torná-lo de fácil interatividade para usuários de todas as idades, podendo assim de maneira simples: Saber mais sobre os tratamentos que a empresa realiza e os seus respectivos procedimentos, agendar uma consulta e saber sobre localização da clínica
+O projeto <b>Calling-Therapies</b> é um aplicativo em desenvolvimento para o Trabalho de Conclusão de Curso da faculdade. 
+
+Seu objetivo é otimizar o relacionamento entre paciente e clinica, facilitando a busca por informações sobre tratamentos e procedimentos disponibilizados, além do agendamento de consultas e verificação da localização da clínica. 
+
+O projeto foi pensado de forma minusiosa para possibilitar a fácil utilização para usuários de todas as idades.
 
 <h3>💪 Soft Skills desenvolvidas</h3>
 Atenção aos detalhes
