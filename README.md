@@ -5,7 +5,7 @@ O projeto <b>Calling-Therapies</b> é um aplicativo em desenvolvimento para o Tr
 
 Seu objetivo é otimizar o relacionamento entre paciente e clinica, facilitando a busca por informações sobre tratamentos e procedimentos disponibilizados, além do agendamento de consultas e verificação da localização da clínica. 
 
-O projeto foi pensado de forma minusiosa para possibilitar a fácil utilização para usuários de todas as idades.
+O projeto foi pensado de forma minuciosa para possibilitar a fácil utilização para usuários de todas as idades.
 
 <h3>💪 Soft Skills desenvolvidas</h3>
 Atenção aos detalhes
