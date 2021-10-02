@@ -1,4 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
 
+        <item
+            android:id="@+id/nav_diciplinas"
+            android:icon="@drawable/ic_disciplina_black"
+            android:title="Disciplinas"
+            android:checked="true"
+            />
+        <item
+            android:id="@+id/nav_forum"
+            android:title="Fórum"
+            android:icon="@drawable/ic_forum_black"
+            />
+        <item
+            android:id="@+id/nav_mensagens"
+            android:title="Mensagens"
+            android:icon="@drawable/ic_chat_black"
+            />
+        <item android:id="@+id/nav_localizacao"
+            android:title="Localização"
+            android:icon="@android:drawable/ic_dialog_map"
+            />
+        <item
+            android:id="@+id/nav_config"
+            android:icon="@drawable/ic_configuracoes_black"
+            android:title="Configurações"
+            />
+
+    </group>
 </menu>
