@@ -9,59 +9,33 @@ import android.view.MenuItem
 import android.widget.Button
 import android.widget.SearchView
 import android.widget.Toast
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.core.view.GravityCompat
+import com.google.android.material.navigation.NavigationView
+import kotlinx.android.synthetic.main.activity_tratamentos.*
 import kotlinx.android.synthetic.main.tela_inicial2.*
 import kotlinx.android.synthetic.main.toolbar.*
 
-class ActivityTratamentos : AppCompatActivity() {
+class ActivityTratamentos : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.tela_inicial2)
+        setContentView(R.layout.activity_tratamentos)
 
-        //IMPLEMENTA A TOOLBAR CRIADA
-        setSupportActionBar(toolbar)
         // alterar título da ActionBar
         supportActionBar?.title = "Tratamentos"
 
         // up navigation
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        //EVENTOS DE CLICK ATRAVÉS DO ID DO BOTÃO LOGIN (ID LOCALIZADO tela_inicial2.xml)
-        //AÇÃO DE BOTÃO DO PRODUTOS
-        val buttonProduto: Button = findViewById(R.id.botao1)
-        buttonProduto.setOnClickListener {
+        setSupportActionBar(toolbar)
 
-//            //EXIBE MENSAGEM NA TELA
-//            Toast.makeText(this,"Produtos",Toast.LENGTH_SHORT).show()
+        // configuração do menu lateral
+        configuraMenuLateral()
 
-
-            //INTENT CRIADA PARA MUDAR PARA A ACTIVITY PRODUTO AO CLICAR NO BOTÃO
-            var intent = Intent(this, ActivityProduto::class.java)
-
-            startActivity(intent)
-        }
-
-
-        val buttonAgende: Button = findViewById(R.id.botao3)
-        buttonAgende.setOnClickListener {
-
-//            //EXIBE MENSAGEM NA TELA
-//            Toast.makeText(this,"Produtos",Toast.LENGTH_SHORT).show()
-
-
-            //INTENT CRIADA PARA MUDAR PARA A ACTIVITY PRODUTO AO CLICAR NO BOTÃO
-            var intent = Intent(this, AgendeJaActivity::class.java)
-
-            startActivity(intent)
-        }
-        val buttonSair :  Button = findViewById(R.id.botao_sair)
-        buttonSair.setOnClickListener {cliqueSair(botao_sair)}
     }
-    fun cliqueSair(botao_sair: Button) {
-        val returnIntent = Intent(this, MainActivity::class.java);
-        returnIntent.putExtra("result", "Saída do BrewerApp");
-        setResult(Activity.RESULT_OK, returnIntent);
-        finish()
-    }
+
+
+
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         // infla o menu com os botões da ActionBar
         menuInflater.inflate(R.menu.bottom_menu_main, menu)
@@ -82,6 +56,7 @@ class ActivityTratamentos : AppCompatActivity() {
             })
         return true
     }
+
         override fun onOptionsItemSelected(item: MenuItem): Boolean {
             // id do item clicado
             val id = item?.itemId
@@ -114,4 +89,49 @@ class ActivityTratamentos : AppCompatActivity() {
             }
             return super.onOptionsItemSelected(item)
         }
+
+
+
+    private fun configuraMenuLateral(){
+        var toogle = ActionBarDrawerToggle(
+            this,
+            layoutMenuLateral,
+            toolbar,
+            R.string.abrir,
+            R.string.fechar,
+        )
+        layoutMenuLateral.addDrawerListener(toogle)
+        toogle.syncState()
+
+        menu_lateral.setNavigationItemSelectedListener(this)
+
     }
+
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.nav_diciplinas -> {
+                Toast.makeText(this, "Clicou Disciplinas", Toast.LENGTH_SHORT).show()
+            }
+
+            R.id.nav_mensagens -> {
+                Toast.makeText(this, "Clicou Mensagens", Toast.LENGTH_SHORT).show()
+            }
+
+            R.id.nav_forum -> {
+                Toast.makeText(this, "Clicou Forum", Toast.LENGTH_SHORT).show()
+            }
+
+            R.id.nav_localizacao -> {
+                Toast.makeText(this, "Clicou Localização", Toast.LENGTH_SHORT).show()
+            }
+
+            R.id.nav_config -> {
+                Toast.makeText(this, "Clicou Config", Toast.LENGTH_SHORT).show()
+            }
+        }
+        layoutMenuLateral.closeDrawer(GravityCompat.START)
+        return true
+    }
+
+
+}
