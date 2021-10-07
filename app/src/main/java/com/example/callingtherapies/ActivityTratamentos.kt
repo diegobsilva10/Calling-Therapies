@@ -109,8 +109,8 @@ class ActivityTratamentos : AppCompatActivity(), NavigationView.OnNavigationItem
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.nav_diciplinas -> {
-                Toast.makeText(this, "Clicou Disciplinas", Toast.LENGTH_SHORT).show()
+            R.id.Tratamentos -> {
+                Toast.makeText(this, "Clicou Tratamentos", Toast.LENGTH_SHORT).show()
             }
 
             R.id.nav_mensagens -> {

@@ -3,9 +3,9 @@
     <group android:checkableBehavior="single">
 
         <item
-            android:id="@+id/nav_diciplinas"
-            android:icon="@drawable/ic_disciplina_black"
-            android:title="Disciplinas"
+            android:id="@+id/Tratamentos"
+            android:icon="@drawable/icons8_syringe_24"
+            android:title="Tratamentos"
             android:checked="true"
             />
         <item
