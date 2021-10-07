@@ -11,8 +11,7 @@
         <item
             android:id="@+id/nav_forum"
             android:title="Fórum"
-            android:icon="@drawable/ic_forum_black"
-            />
+            android:icon="@drawable/ic_forum_black" />
         <item
             android:id="@+id/nav_mensagens"
             android:title="Mensagens"

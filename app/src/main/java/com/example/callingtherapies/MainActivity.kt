@@ -15,6 +15,7 @@ class MainActivity : DebugActivity2() {
         setContentView(R.layout.login)
 
 
+
         //EVENTO DE CLICK ATRAVÉS DO ID DO BOTÃO LOGIN (ID LOCALIZADO LOGIN_XML)
         val button: Button = findViewById(R.id.botao_login)
         button.setOnClickListener {

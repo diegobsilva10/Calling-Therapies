@@ -6,8 +6,7 @@
     android:minWidth="?attr/actionBarSize"
     android:background="#1BDECD"
     android:minHeight="?attr/actionBarSize"
-    android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
-    >
+    android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
 
 
 

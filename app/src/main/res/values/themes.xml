@@ -15,6 +15,7 @@
     </style>
     <style name="AppTheme.Toolbar" parent="Theme.CallingTherapies">
         <item name="windowActionBar">false</item>
+
         <item name="windowNoTitle">true</item>
     </style>
 </resources>

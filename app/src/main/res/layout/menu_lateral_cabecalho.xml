@@ -6,7 +6,8 @@
     android:layout_height="160dp"
     android:background="#456789"
     android:layout_gravity="bottom"
-    android:padding="16dp">
+    android:padding="16dp"
+    >
 
 
     <ImageView

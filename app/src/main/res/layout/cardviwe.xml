@@ -10,7 +10,6 @@
     android:background="#1BDECD">
     <RelativeLayout
         android:layout_width="match_parent"
-
         android:layout_height="0dp"
         android:layout_weight="2">
         <ImageView
@@ -41,9 +40,11 @@
         android:layout_weight="3">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/card_produtos"
             android:layout_width="0dp"
-            android:background="@color/white"
+            app:cardBackgroundColor="#fff"
             android:layout_margin="10dp"
+            app:cardCornerRadius="4dp"
             app:cardElevation="4dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
@@ -51,12 +52,12 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:padding="10dp"
-                android:layout_height="match_parent">
-
-
-            <ImageView
+                android:layout_height="match_parent"
+                >
+                <ImageView
                 android:layout_width="80dp"
-                android:layout_height="80dp"/>
+                android:layout_height="80dp"
+                    />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -64,17 +65,18 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:textSize="15dp"
-
-
-                android:text="Produtos"/>
+                android:text="Produtos"
+                android:textColor="#000"/>
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/card_tratamentos"
             android:layout_width="0dp"
-            android:background="@color/white"
+            app:cardBackgroundColor="#fff"
             android:layout_margin="10dp"
             app:cardElevation="4dp"
+            app:cardCornerRadius="4dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1">
@@ -93,14 +95,49 @@
                     android:layout_marginStart="20dp"
                     android:textSize="15dp"
 
-                    android:text="Tratamentos"/>
+                    android:text="Tratamentos"
+                    android:textColor="#000"/>
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/card_agende"
             android:layout_width="0dp"
             android:layout_margin="10dp"
-            android:background="@color/white"
+            app:cardBackgroundColor="#fff"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="4dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:textSize="15dp"
+                    android:text="Agende já"
+                    android:textColor="#000"/>
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_localize"
+            android:layout_width="0dp"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="4dp"
+            app:cardBackgroundColor="#fff"
             app:cardElevation="4dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
@@ -121,38 +158,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:textSize="15dp"
-                    android:text="Agende já"/>
-            </RelativeLayout>
-
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="0dp"
-            android:layout_margin="10dp"
-            android:background="@color/white"
-            app:cardElevation="4dp"
-            android:layout_height="0dp"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:padding="10dp"
-                android:layout_height="match_parent">
-
-
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginBottom="20dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:textSize="15dp"
-
-                    android:text="Sair"/>
+                    android:text="Localize"
+                    android:textColor="#000"/>
             </RelativeLayout>
 
 

@@ -7,6 +7,7 @@ import android.util.Log
 
 open class DebugActivity2 : AppCompatActivity() {
 
+
     private val TAG = "Calling Therapies"
     private val className: String
         get() {

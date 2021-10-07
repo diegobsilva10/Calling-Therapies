@@ -6,7 +6,6 @@
     android:minWidth="?attr/actionBarSize"
     android:background="?attr/colorSecondary"
     android:minHeight="?attr/actionBarSize"
-    android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
-    >
+    android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
 
 </androidx.appcompat.widget.Toolbar>

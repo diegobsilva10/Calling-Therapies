@@ -17,6 +17,7 @@ class ActivityProduto : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.tela_inicial2)
 
+
         //IMPLEMENTA A TOOLBAR CRIADA
         setSupportActionBar(toolbar)
         // alterar título da ActionBar

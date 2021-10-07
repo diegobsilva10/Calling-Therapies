@@ -53,7 +53,8 @@ class ActivityTratamentos : AppCompatActivity(), NavigationView.OnNavigationItem
                     return false
                 }
 
-            })
+            }
+        )
         return true
     }
 

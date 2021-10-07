@@ -6,8 +6,7 @@
     android:layout_height="match_parent"
     android:background="#DCDCDC"
     tools:context=".CadastroActivity">
-    <include layout="@layout/toolbar">
-    </include>
+    <include layout="@layout/toolbar"></include>
 
     <Button
         android:id="@+id/botaoSairCadastro"

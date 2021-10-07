@@ -9,11 +9,7 @@
     tools:context=".TelaInicialActivity"
     android:orientation="horizontal"
     >
-    <include layout="@layout/toolbar">
-
-
-
-    </include>
+    <include layout="@layout/toolbar"></include>
 
     <TextView
         android:id="@+id/mensagemTelaInicial"

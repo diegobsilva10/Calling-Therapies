@@ -12,6 +12,7 @@ import android.view.View.VISIBLE
 import android.widget.*
 
 import kotlinx.android.synthetic.main.activity_tela_inicial.mensagemTelaInicial
+import kotlinx.android.synthetic.main.cardviwe.*
 import kotlinx.android.synthetic.main.login.*
 import kotlinx.android.synthetic.main.tela_inicial2.*
 import kotlinx.android.synthetic.main.toolbar.*
@@ -28,8 +29,25 @@ class TelaInicialActivity : DebugActivity2() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.cardviwe)
 
+        card_tratamentos.setOnClickListener{
+            val intent = Intent(this, ActivityTratamentos::class.java)
+            startActivity(intent)
+        }
+
+        card_produtos.setOnClickListener{
+            val intent = Intent(this, ActivityProduto::class.java)
+            startActivity(intent)
+        }
+        card_agende.setOnClickListener{
+            val intent = Intent(this, AgendeJaActivity::class.java)
+            startActivity(intent)
+        }
+
     }
+
 }
+
+
 
         //progressbar.visibility = View.GONE
 

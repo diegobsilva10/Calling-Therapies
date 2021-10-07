@@ -6,5 +6,6 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="abrir">Abrir</string>
+
     <string name="fechar">Fechar</string>
 </resources>

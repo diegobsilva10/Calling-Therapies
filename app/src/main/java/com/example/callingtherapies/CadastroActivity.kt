@@ -21,6 +21,7 @@ class CadastroActivity : AppCompatActivity() {
         supportActionBar?.title = "Cadastro de Usuário"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
+
         val buttonSair: Button = findViewById(botaoSairCadastro)
         buttonSair.setOnClickListener {cliqueSair(botaoSairCadastro)}
     }

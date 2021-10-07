@@ -24,6 +24,7 @@ class AgendeJaActivity :  DebugActivity2()  {
         // alterar título da ActionBar
         supportActionBar?.title = "Agende Ja"
 
+
         // up navigation
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
