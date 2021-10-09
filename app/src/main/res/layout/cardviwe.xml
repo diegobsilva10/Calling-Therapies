@@ -7,7 +7,8 @@
     android:layout_height="match_parent"
     android:weightSum="5"
     tools:context=".TelaInicialActivity"
-    android:background="#1BDECD">
+    android:background="#1BDECD"
+    android:foreground="?attr/selectableItemBackground">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -48,7 +49,8 @@
             app:cardElevation="4dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
-            android:layout_rowWeight="1">
+            android:layout_rowWeight="1"
+            android:foreground="?attr/selectableItemBackground">
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:padding="10dp"
