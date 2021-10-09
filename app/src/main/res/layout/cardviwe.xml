@@ -13,12 +13,12 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2">
+
         <ImageView
             android:id="@+id/imageView"
-            android:layout_centerInParent="true"
             android:layout_width="150dp"
-            android:layout_height="150dp">
-        </ImageView>
+            android:layout_height="150dp"
+            android:layout_centerInParent="true"></ImageView>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
