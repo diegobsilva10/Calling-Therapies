@@ -134,6 +134,9 @@ class ActivityProduto : DebugActivity2(), NavigationView.OnNavigationItemSelecte
         when (item.itemId) {
             R.id.Tratamentos -> {
                 Toast.makeText(this, "Clicou Tratamentos", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, ActivityTratamentos::class.java)
+                // fazer a chamada
+                startActivity(intent)
             }
 
             R.id.nav_agende -> {
