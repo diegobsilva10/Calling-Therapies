@@ -58,38 +58,38 @@ class ActivityTratamentos : AppCompatActivity(), NavigationView.OnNavigationItem
         return true
     }
 
-        override fun onOptionsItemSelected(item: MenuItem): Boolean {
-            // id do item clicado
-            val id = item?.itemId
-            // verificar qual item foi clicado e mostrar a mensagem Toast na tela
-            // a comparação é feita com o recurso de id definido no xml
-            if (id == R.id.action_buscar) {
-                Toast.makeText(this, "Buscar", Toast.LENGTH_LONG).show()
-            } else if (id == R.id.action_adicionar_produtos) {
-                Toast.makeText(this, "Adicionar Produtos", Toast.LENGTH_LONG).show()
-                // criar intent
-                val intent = Intent(this, CadastroActivity::class.java)
-                // colocar parâmetros (opcional)
-                val params = Bundle()
-                intent.putExtras(params)
-                // fazer a chamada
-                startActivity(intent)
-            } else if (id == R.id.action_configuracoes) {
-                Toast.makeText(this, "Configurações", Toast.LENGTH_LONG).show()
-                //INTENT CRIADA PARA MUDAR DE PAGINA AO CLICAR NO BOTÃO
-                val intent = Intent(this, ConfiguracoesActivity::class.java)
-                // colocar parâmetros (opcional)
-                val params = Bundle()
-                intent.putExtras(params)
-                // fazer a chamada
-                startActivity(intent)
-            }
-            // botão up navigation
-            else if (id == android.R.id.home) {
-                finish()
-            }
-            return super.onOptionsItemSelected(item)
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        // id do item clicado
+        val id = item?.itemId
+        // verificar qual item foi clicado e mostrar a mensagem Toast na tela
+        // a comparação é feita com o recurso de id definido no xml
+        if (id == R.id.action_buscar) {
+            Toast.makeText(this, "Buscar", Toast.LENGTH_LONG).show()
+        } else if (id == R.id.action_adicionar_produtos) {
+            Toast.makeText(this, "Adicionar Produtos", Toast.LENGTH_LONG).show()
+            // criar intent
+            val intent = Intent(this, CadastroActivity::class.java)
+            // colocar parâmetros (opcional)
+            val params = Bundle()
+            intent.putExtras(params)
+            // fazer a chamada
+            startActivity(intent)
+        } else if (id == R.id.action_configuracoes) {
+            Toast.makeText(this, "Configurações", Toast.LENGTH_LONG).show()
+            //INTENT CRIADA PARA MUDAR DE PAGINA AO CLICAR NO BOTÃO
+            val intent = Intent(this, ConfiguracoesActivity::class.java)
+            // colocar parâmetros (opcional)
+            val params = Bundle()
+            intent.putExtras(params)
+            // fazer a chamada
+            startActivity(intent)
         }
+        // botão up navigation
+        else if (id == android.R.id.home) {
+            finish()
+        }
+        return super.onOptionsItemSelected(item)
+    }
 
 
 
@@ -114,20 +114,31 @@ class ActivityTratamentos : AppCompatActivity(), NavigationView.OnNavigationItem
                 Toast.makeText(this, "Clicou Tratamentos", Toast.LENGTH_SHORT).show()
             }
 
-            R.id.nav_mensagens -> {
-                Toast.makeText(this, "Clicou Mensagens", Toast.LENGTH_SHORT).show()
+            R.id.nav_agende -> {
+                Toast.makeText(this, "Clicou em Agende", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, AgendeJaActivity::class.java)
+                // fazer a chamada
+                startActivity(intent)
+
             }
 
-            R.id.nav_forum -> {
-                Toast.makeText(this, "Clicou Forum", Toast.LENGTH_SHORT).show()
+            R.id.nav_produtos -> {
+                Toast.makeText(this, "Clicou em produtos", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, ActivityProduto::class.java)
+                startActivity(intent)
             }
 
             R.id.nav_localizacao -> {
-                Toast.makeText(this, "Clicou Localização", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Clicou Localize", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, activity_localize::class.java)
+                startActivity(intent)
+
             }
 
             R.id.nav_config -> {
                 Toast.makeText(this, "Clicou Config", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, ConfiguracoesActivity::class.java)
+                startActivity(intent)
             }
         }
         layoutMenuLateral.closeDrawer(GravityCompat.START)
