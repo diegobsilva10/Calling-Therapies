@@ -9,17 +9,15 @@
             android:checked="true"
             />
         <item
-            android:id="@+id/nav_forum"
-            android:title="Fórum"
-            android:icon="@drawable/ic_forum_black" />
+            android:id="@+id/nav_produtos"
+            android:title="Produtos"
+            />
         <item
-            android:id="@+id/nav_mensagens"
-            android:title="Mensagens"
-            android:icon="@drawable/ic_chat_black"
+            android:id="@+id/nav_agende"
+            android:title="Agende Já"
             />
         <item android:id="@+id/nav_localizacao"
-            android:title="Localização"
-            android:icon="@android:drawable/ic_dialog_map"
+            android:title="Localize"
             />
         <item
             android:id="@+id/nav_config"
