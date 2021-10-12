@@ -6,6 +6,11 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="abrir">Abrir</string>
+    <string name="Tratamento">Nome Do Tratamento</string>
+    <string name="Saibamais">Saiba Mais</string>
+    <string name="descricao">Mussum Ipsum, cacilds vidis litro abertis. Atirei o pau no gatis, per gatis num morreus. Interagi no mé,
+        cursus quis, vehicula ac nisi. Aenean aliquam molestie leo, vitae iaculis nisl. Paisis,
+        filhis, espiritis santis.</string>
 
     <string name="fechar">Fechar</string>
 </resources>
