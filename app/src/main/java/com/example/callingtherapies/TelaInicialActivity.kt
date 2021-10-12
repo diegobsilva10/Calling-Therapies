@@ -42,6 +42,10 @@ class TelaInicialActivity : DebugActivity2() {
             val intent = Intent(this, AgendeJaActivity::class.java)
             startActivity(intent)
         }
+        card_localize.setOnClickListener{
+            val intent=Intent(this, activity_localize::class.java)
+            startActivity(intent)
+        }
 
     }
 
