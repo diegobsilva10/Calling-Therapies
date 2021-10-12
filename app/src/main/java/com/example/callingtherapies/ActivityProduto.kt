@@ -17,10 +17,10 @@ import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_produto.*
+import kotlinx.android.synthetic.main.activity_produto.layoutMenuLateral
+import kotlinx.android.synthetic.main.activity_produto.menu_lateral
 import kotlinx.android.synthetic.main.activity_tratamentos.*
-import kotlinx.android.synthetic.main.activity_tratamentos.layoutMenuLateral
-import kotlinx.android.synthetic.main.activity_tratamentos.menu_lateral
-import kotlinx.android.synthetic.main.tela_inicial2.*
+
 import kotlinx.android.synthetic.main.toolbar.*
 
 class ActivityProduto : DebugActivity2(), NavigationView.OnNavigationItemSelectedListener {
@@ -136,26 +136,30 @@ class ActivityProduto : DebugActivity2(), NavigationView.OnNavigationItemSelecte
                 Toast.makeText(this, "Clicou Tratamentos", Toast.LENGTH_SHORT).show()
             }
 
-            R.id.nav_mensagens -> {
-                Toast.makeText(this, "Clicou Mensagens", Toast.LENGTH_SHORT).show()
-            }
+            R.id.nav_agende -> {
+                Toast.makeText(this, "Clicou em Agende", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, AgendeJaActivity::class.java)
+                // fazer a chamada
+                startActivity(intent)
 
-            R.id.nav_forum -> {
-                Toast.makeText(this, "Clicou Forum", Toast.LENGTH_SHORT).show()
             }
 
             R.id.nav_localizacao -> {
-                Toast.makeText(this, "Clicou Localização", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Clicou Localize", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, activity_localize::class.java)
+                startActivity(intent)
+
             }
 
             R.id.nav_config -> {
                 Toast.makeText(this, "Clicou Config", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, ConfiguracoesActivity::class.java)
+                startActivity(intent)
             }
         }
         layoutMenuLateral.closeDrawer(GravityCompat.START)
         return true
     }
-
 
 }
     
