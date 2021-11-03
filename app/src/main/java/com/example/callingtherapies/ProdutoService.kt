@@ -8,10 +8,11 @@ object ProdutoService {
         val produtos = mutableListOf<Produto>()
 
         // criar 10 disciplinas
-        for (i in 1..50) {
+        for (i in 1..10) {
             val p = Produto()
             p.nomeProduto = "Produto: $i"
             p.precoProduto = "Preço R$: $i"
+            p.descricaoProduto = "Descrição"
             produtos.add(p)
         }
         return produtos

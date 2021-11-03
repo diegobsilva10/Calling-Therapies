@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CallingTherapies">
         <activity
+            android:name=".ProdutoActivity"
+            android:exported="true" />
+        <activity
             android:name=".activity_localize"
             android:exported="true" />
         <activity

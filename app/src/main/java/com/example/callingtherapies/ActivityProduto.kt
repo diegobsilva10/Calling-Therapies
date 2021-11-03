@@ -46,7 +46,11 @@ class ActivityProduto : DebugActivity2(), NavigationView.OnNavigationItemSelecte
     }
     fun onClickProduto(produto: Produto){
         Toast.makeText(this, "Clicou no produto ${produto.nomeProduto}", Toast.LENGTH_SHORT).show()
+        val intent = Intent(this, ProdutoActivity::class.java)
+        intent.putExtra("produto", produto)
+        startActivity(intent)
     }
+
 
     override fun onResume() {
         super.onResume()
@@ -165,6 +169,5 @@ class ActivityProduto : DebugActivity2(), NavigationView.OnNavigationItemSelecte
     }
 
 }
-    
 
 
