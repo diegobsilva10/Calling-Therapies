@@ -6,13 +6,13 @@ import java.io.Serializable
 class Produto: Serializable {
 
     var id:Long? = null
-    var nomeProduto = ""
-    var precoProduto = ""
-    var descricaoProduto = ""
+    var name = ""
+    var description = ""
+    var price= ""
 
     override fun toString(): String {
-        return "Produtos(nome='$nomeProduto')"
-        "Preço (preço='$precoProduto')"
-        "Descrição (descrição='$descricaoProduto)"
+        return "Produtos(nome='$name')"
+        "Preço (preço='$description')"
+        "Descrição (descrição='$price)"
     }
 }

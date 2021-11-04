@@ -41,7 +41,7 @@ class ProdutoAdapter (
         // recuperar objeto disciplina
         val produto = produtos[position]
         // atualizar dados de disciplina
-        holder.cardNome.text = produto.nomeProduto
+        holder.cardNome.text = produto.name
 
         // adiciona evento de clique
         holder.itemView.setOnClickListener {onClick(produto)}

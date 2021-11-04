@@ -45,7 +45,7 @@ class ActivityProduto : DebugActivity2(), NavigationView.OnNavigationItemSelecte
         recyclerProdutos?.setHasFixedSize(true)
     }
     fun onClickProduto(produto: Produto){
-        Toast.makeText(this, "Clicou no produto ${produto.nomeProduto}", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "Clicou no produto ${produto.name}", Toast.LENGTH_SHORT).show()
         val intent = Intent(this, ProdutoActivity::class.java)
         intent.putExtra("produto", produto)
         startActivity(intent)
@@ -59,8 +59,15 @@ class ActivityProduto : DebugActivity2(), NavigationView.OnNavigationItemSelecte
 
     var produtos = listOf<Produto>()
     fun taskProdutos(){
-        this.produtos = ProdutoService.getProdutoService(this)
-        recyclerProdutos?. adapter = ProdutoAdapter(produtos) {onClickProduto(it)}
+        Thread {
+
+            this.produtos = ProdutoService.getProdutoService(this)
+
+            runOnUiThread {
+                recyclerProdutos?.adapter = ProdutoAdapter(produtos) { onClickProduto(it) }
+            }
+
+        }.start()
     }
     
 

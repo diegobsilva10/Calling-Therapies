@@ -12,8 +12,9 @@ import kotlinx.android.synthetic.main.activity_produto2.*
 
         val prod = intent.getSerializableExtra("produto") as Produto
 
-        nome_produto.text = prod.nomeProduto
-        descricao_produto.text = prod.descricaoProduto
+        nome_produto.text = prod.name
+        descricao_produto.text = prod.description
+        preco_produto.text = prod.price
 
         //EXIBE O NOME DO PRODUTO CLICADO
         // Toast.makeText(this, "${prod.nomeProduto}", Toast.LENGTH_LONG).show()
