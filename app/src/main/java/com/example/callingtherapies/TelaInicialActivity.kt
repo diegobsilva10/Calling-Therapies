@@ -47,6 +47,8 @@ class TelaInicialActivity : DebugActivity2() {
             startActivity(intent)
         }
 
+        //val nome_usuario_prefs = Prefs.getString("nome_user")
+        // Toast.makeText(this, "testando o nome prefs: $nome_usuario_prefs", Toast.LENGTH_LONG).show()
     }
 
 }

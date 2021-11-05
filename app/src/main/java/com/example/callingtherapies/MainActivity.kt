@@ -14,7 +14,9 @@ class MainActivity : DebugActivity2() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)
 
-
+        campo_usuario.setText(Prefs.getString("nome_user"))
+        campo_senha.setText(Prefs.getString("senha_user"))
+        checkBoxLogin.isChecked = Prefs.getBoolean("lembrar_login")
 
         //EVENTO DE CLICK ATRAVÉS DO ID DO BOTÃO LOGIN (ID LOCALIZADO LOGIN_XML)
         val button: Button = findViewById(R.id.botao_login)
@@ -24,6 +26,16 @@ class MainActivity : DebugActivity2() {
 
             val nome_usuario = campo_usuario.text.toString()
             val senha = campo_senha.text.toString()
+            val check_login = checkBoxLogin.isChecked
+
+            if (check_login) {
+                Prefs.setString("nome_user", nome_usuario)
+                Prefs.setString("senha_user", senha)
+            } else{
+                Prefs.setString("nome_user", "")
+                Prefs.setString("senha_user", "")
+            }
+            Prefs.setBoolean("lembrar_login", check_login)
 
             if (nome_usuario == "aluno" && senha == "impacta"){
                 //INTENT CRIADA PARA MUDAR DE PAGINA AO CLICAR NO BOTÃO
