@@ -16,16 +16,18 @@ object ProdutoService {
     val TAG = "WS_CT"
 
     fun getProdutoService (context: Context): List<Produto> {
-        var produtos = mutableListOf<Produto>()
+//        var produtos = mutableListOf<Produto>()
 
-        val url = "$host/products"
+//        val url = "$host/products"
+//
+//        //VARIAVEL PARA RETORNAR COMO STRING A RESPOSTA DA CHAMADA DA ROTA
+//        val json = HttpHelper.get(url)
+//
+//        Log.d(TAG, json)
+//
+//        produtos = parseJson<MutableList<Produto>>(json)
 
-        //VARIAVEL PARA RETORNAR COMO STRING A RESPOSTA DA CHAMADA DA ROTA
-        val json = HttpHelper.get(url)
-
-        Log.d(TAG, json)
-
-        produtos = parseJson<MutableList<Produto>>(json)
+      var  produtos = DataBaseManager.getProdutoDAO().findAll()
 
         return produtos
     }

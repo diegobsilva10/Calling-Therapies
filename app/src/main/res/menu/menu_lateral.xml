@@ -24,6 +24,11 @@
             android:icon="@drawable/ic_configuracoes_black"
             android:title="Configurações"
             />
+        <item
+            android:id="@+id/nav_cadastro"
+            android:title="Cadastro de Produto">
+
+        </item>
 
     </group>
 </menu>

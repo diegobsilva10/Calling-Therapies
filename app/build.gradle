@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
 
 }
 
@@ -51,6 +52,8 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.8'
     implementation 'com.squareup.okhttp3:okhttp:3.8.0'
     implementation 'com.google.android.gms:play-services-maps:18.0.0'
+    implementation 'androidx.room:room-runtime:2.2.3'
+    kapt "androidx.room:room-compiler:2.2.3"
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

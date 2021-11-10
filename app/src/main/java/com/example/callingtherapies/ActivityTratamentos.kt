@@ -140,6 +140,11 @@ class ActivityTratamentos : AppCompatActivity(), NavigationView.OnNavigationItem
                 val intent = Intent(this, ConfiguracoesActivity::class.java)
                 startActivity(intent)
             }
+            R.id.nav_cadastro ->{
+                Toast.makeText(this, "Clicou Cadastro", Toast.LENGTH_SHORT).show()
+                val intent = Intent (this, CadastroActivity::class.java )
+                startActivity(intent)
+            }
         }
         layoutMenuLateral.closeDrawer(GravityCompat.START)
         return true
