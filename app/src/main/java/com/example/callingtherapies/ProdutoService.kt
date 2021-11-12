@@ -2,9 +2,11 @@ package com.example.callingtherapies
 
 //Serviço que vai consumir a API e mostrar na Acitvity
 import android.content.Context
+import android.net.ConnectivityManager
 import android.util.Log
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import com.example.callingtherapies.ProdutoService.parseJson as parseJson
 
 object ProdutoService {
 
@@ -27,8 +29,6 @@ object ProdutoService {
             for (p in produtos){
                 saveOffline(p)
             }
-
-//
 //            Log.d(TAG, json)
 //
             produtos = parseJson<MutableList<Produto>>(json)

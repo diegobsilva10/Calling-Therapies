@@ -14,6 +14,7 @@ open class DebugActivity2 : AppCompatActivity() {
             val s = javaClass.name
             return s.substring(s.lastIndexOf("."))
         }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.d(TAG, className + ".onCreate() chamado")

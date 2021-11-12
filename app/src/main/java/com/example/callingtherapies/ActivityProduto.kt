@@ -52,6 +52,7 @@ class ActivityProduto : DebugActivity2(), NavigationView.OnNavigationItemSelecte
     }
 
 
+
     override fun onResume() {
         super.onResume()
         taskProdutos()
