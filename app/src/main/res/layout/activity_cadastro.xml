@@ -25,7 +25,7 @@
         app:srcCompat="@drawable/imgcadastro" />
 
     <EditText
-        android:id="@+id/nome"
+        android:id="@+id/nomeP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/rounded_corner"
@@ -40,7 +40,7 @@
         app:layout_constraintVertical_bias="0.608" />
 
     <EditText
-        android:id="@+id/descricao"
+        android:id="@+id/descricaoP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/rounded_corner"
@@ -55,7 +55,7 @@
         app:layout_constraintVertical_bias="0.686" />
 
     <EditText
-        android:id="@+id/preco"
+        android:id="@+id/precoP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/rounded_corner"
@@ -70,7 +70,7 @@
         app:layout_constraintVertical_bias="0.764" />
 
     <Button
-        android:id="@+id/salvar"
+        android:id="@+id/salvarP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cadastrar"
