@@ -1,7 +1,6 @@
 package com.example.callingtherapies
 
 import androidx.room.Dao
-import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 
@@ -9,7 +8,7 @@ import androidx.room.Query
 interface ProdutoDAO {
 
     @Query("SELECT * FROM produtos WHERE id=:id")
-    fun getById(id: Long): Produto?
+    fun getById(id: Long?): Produto?
 
     @Query("SELECT * FROM produtos")
     fun findAll():  List<Produto>
@@ -17,6 +16,6 @@ interface ProdutoDAO {
     @Insert
     fun insert(produto: Produto)
 
-    @Delete
-    fun delete (produto: Produto)
+    @Query("DELETE from produtos")
+    fun delete()
 }

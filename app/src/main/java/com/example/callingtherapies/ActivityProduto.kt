@@ -69,7 +69,7 @@ class ActivityProduto : DebugActivity2(), NavigationView.OnNavigationItemSelecte
 
         }.start()
     }
-    
+
 
 
     // método sobrescrito para inflar o menu na Actionbar
@@ -125,7 +125,7 @@ class ActivityProduto : DebugActivity2(), NavigationView.OnNavigationItemSelecte
         }
         return super.onOptionsItemSelected(item)
     }
-// CONFIGURA MENU LATERAL E EVENTOS DE CLICK
+    // CONFIGURA MENU LATERAL E EVENTOS DE CLICK
     private fun configuraMenuLateral(){
         var toogle = ActionBarDrawerToggle(
             this,
@@ -176,5 +176,3 @@ class ActivityProduto : DebugActivity2(), NavigationView.OnNavigationItemSelecte
     }
 
 }
-
-

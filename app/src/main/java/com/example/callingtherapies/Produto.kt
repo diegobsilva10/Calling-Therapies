@@ -16,8 +16,9 @@ class Produto: Serializable {
     var price= ""
 
     override fun toString(): String {
-        return "Produtos(nome='$name')"
+        return "Produtos(id='$id')"
         "Preço (preço='$description')"
         "Descrição (descrição='$price)"
     }
+
 }
