@@ -1,8 +1,8 @@
 # Calling-Therapies
 
 <h3> Implementações realizadas</h3>
-<br>Conceitos de NavigationDrawer
-<br>Listas, Cards e RecyclerView
+<br>Consumindo API Externa
+<br>Salvando dados no ambiente local da API
 
 <h2>Grupo que desenvolveu o projeto: Panelinha</h2>
 <br>Gabriel Altomar - 1903246
