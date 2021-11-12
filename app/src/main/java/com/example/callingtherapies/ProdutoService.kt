@@ -22,6 +22,8 @@ object ProdutoService {
             //VARIAVEL PARA RETORNAR COMO STRING A RESPOSTA DA CHAMADA DA ROTA
             val json = HttpHelper.get(url)
             produtos = parseJson(json)
+
+            // SALVAR OS DADOS RETORNADOS DA API
             for (p in produtos){
                 saveOffline(p)
             }
