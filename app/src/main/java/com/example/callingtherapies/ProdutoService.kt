@@ -26,9 +26,9 @@ object ProdutoService {
             produtos = parseJson(json)
 
             // SALVAR OS DADOS RETORNADOS DA API
-            for (p in produtos){
-                saveOffline(p)
-            }
+ //           for (p in produtos){
+ //               saveOffline(p)
+ //           }
 //            Log.d(TAG, json)
 //
             produtos = parseJson<MutableList<Produto>>(json)

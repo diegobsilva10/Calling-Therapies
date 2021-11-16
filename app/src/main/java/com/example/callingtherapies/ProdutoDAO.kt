@@ -1,6 +1,7 @@
 package com.example.callingtherapies
 
 import androidx.room.Dao
+import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 
@@ -16,6 +17,7 @@ interface ProdutoDAO {
     @Insert
     fun insert(produto: Produto)
 
-    @Query("DELETE from produtos")
-    fun delete()
+
+    @Delete
+    fun delete(produto: Produto)
 }

@@ -3,13 +3,8 @@
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.EditText
 import android.widget.TextView
-import android.widget.Toast
 import com.example.callingtherapies.ProdutoService.existeProduto
-import com.example.callingtherapies.ProdutoService.saveOffline
-import com.google.gson.Gson
-import kotlinx.android.synthetic.main.activity_produto.*
 import kotlinx.android.synthetic.main.activity_produto2.*
 import kotlin.concurrent.thread
 
@@ -41,8 +36,8 @@ import kotlin.concurrent.thread
                 thread{
                     val dao = DataBaseManager.getProdutoDAO()
                         .insert(criarProduto)
-
                 }
+
 
                 }
 
