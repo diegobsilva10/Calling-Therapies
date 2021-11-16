@@ -1,9 +1,6 @@
 package com.example.callingtherapies
 
-import androidx.room.Dao
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.Query
+import androidx.room.*
 
 @Dao
 interface ProdutoDAO {
@@ -14,7 +11,7 @@ interface ProdutoDAO {
     @Query("SELECT * FROM produtos")
     fun findAll():  List<Produto>
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insert(produto: Produto)
 
 

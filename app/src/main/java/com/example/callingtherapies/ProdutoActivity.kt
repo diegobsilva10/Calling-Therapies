@@ -20,22 +20,15 @@ import kotlin.concurrent.thread
             descricao_produto.text = prod.description
             preco_produto.text = prod.price
 
-            val editTextnomeProduto = findViewById<TextView>(R.id.nome_produto)
-            val editTextdescicaoP = findViewById<TextView>(R.id.descricao_produto)
-            val editTextprecoP = findViewById<TextView>(R.id.preco_produto)
-
-
-
-
             button.setOnClickListener {
-                val criarProduto = Produto()
-                criarProduto.name = editTextnomeProduto.text.toString()
-                criarProduto.description = editTextdescicaoP.text.toString()
-                criarProduto.price = editTextprecoP.text.toString()
+              //  val criarProduto = Produto()
+              //  criarProduto.name = prod.name
+              //  criarProduto.description = prod.description
+              //  criarProduto.price = prod.price
 
                 thread{
                     val dao = DataBaseManager.getProdutoDAO()
-                        .insert(criarProduto)
+                        .insert(prod)
                 }
 
 

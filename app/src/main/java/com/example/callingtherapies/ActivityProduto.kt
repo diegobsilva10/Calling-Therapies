@@ -44,6 +44,7 @@ class ActivityProduto : DebugActivity2(), NavigationView.OnNavigationItemSelecte
         recyclerProdutos?.itemAnimator = DefaultItemAnimator()
         recyclerProdutos?.setHasFixedSize(true)
     }
+
     fun onClickProduto(produto: Produto){
         Toast.makeText(this, "Clicou no produto ${produto.name}", Toast.LENGTH_SHORT).show()
         val intent = Intent(this, ProdutoActivity::class.java)
