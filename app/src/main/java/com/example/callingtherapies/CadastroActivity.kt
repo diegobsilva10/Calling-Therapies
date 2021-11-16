@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.activity_produto.*
 import kotlinx.android.synthetic.main.toolbar.*
 import kotlin.concurrent.thread
 
-class CadastroActivity : AppCompatActivity() {
+class CadastroActivity : AppCompatActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,7 +19,12 @@ class CadastroActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         // alterar título da ActionBar
         supportActionBar?.title = "Cadastro de Produto"
+
+        // up navigation
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        setSupportActionBar(toolbar)
+
 
         val button: Button = findViewById(R.id.salvarP)
         val editTextnomeP = findViewById<EditText>(R.id.nomeP)
@@ -37,7 +42,7 @@ class CadastroActivity : AppCompatActivity() {
             val gson = Gson()
             val produtoJson = gson.toJson(criarProduto)
 
-            thread{
+            thread {
                 val dao = DataBaseManager.getProdutoDAO()
                     .insert(criarProduto)
 
@@ -46,7 +51,6 @@ class CadastroActivity : AppCompatActivity() {
 
             //           println("TESTE" + produtoJson )
         }
-
 
     }
 }
