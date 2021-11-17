@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import com.example.callingtherapies.ProdutoService.parseJson
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_produto.*
 
@@ -12,6 +13,8 @@ import kotlinx.android.synthetic.main.toolbar.*
 import kotlin.concurrent.thread
 
 class CadastroActivity : AppCompatActivity(){
+    val host = "https://apikotlin.herokuapp.com/"
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,9 +48,7 @@ class CadastroActivity : AppCompatActivity(){
             thread {
                 val dao = DataBaseManager.getProdutoDAO()
                     .insert(criarProduto)
-
             }
-
 
             //           println("TESTE" + produtoJson )
         }

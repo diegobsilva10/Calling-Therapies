@@ -12,14 +12,14 @@ object ProdutoService {
 
     //URL DA API PARA CONSUMIR
 
-    val host = "https://fastproducts.herokuapp.com"
+    val host = "https://apikotlin.herokuapp.com/"
 
     val TAG = "WS_CT"
 
     fun getProdutoService (context: Context): List<Produto> {
         var produtos = listOf<Produto>()
         try {
-            val url = "$host/products"
+            val url = "$host/api"
 
             //VARIAVEL PARA RETORNAR COMO STRING A RESPOSTA DA CHAMADA DA ROTA
             val json = HttpHelper.get(url)
