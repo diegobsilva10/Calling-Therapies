@@ -130,7 +130,7 @@ class ActivityTratamentos : AppCompatActivity(), NavigationView.OnNavigationItem
 
             R.id.nav_localizacao -> {
                 Toast.makeText(this, "Clicou Localize", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, activity_localize::class.java)
+                val intent = Intent(this,MapasActivity::class.java)
                 startActivity(intent)
 
             }

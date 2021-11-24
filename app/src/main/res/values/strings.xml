@@ -11,6 +11,9 @@
     <string name="descricao">Mussum Ipsum, cacilds vidis litro abertis. Atirei o pau no gatis, per gatis num morreus. Interagi no mé,
         cursus quis, vehicula ac nisi. Aenean aliquam molestie leo, vitae iaculis nisl. Paisis,
         filhis, espiritis santis.</string>
+    <string name="API_KEY">AIzaSyCaEBNRKJX7mrmJY2gI3i2FVMlUdvjfXj8</string>
 
     <string name="fechar">Fechar</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
