@@ -26,8 +26,11 @@
         <entry key="..\:/Users/diego/CloneKotlin/Calling-Therapies/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/diego/CloneKotlin/Calling-Therapies/app/src/main/res/layout/activity_main2.xml" value="0.33" />
         <entry key="..\:/Users/diego/CloneKotlin/Calling-Therapies/app/src/main/res/layout/activity_mapas.xml" value="0.1875" />
+        <entry key="..\:/Users/diego/CloneKotlin/Calling-Therapies/app/src/main/res/layout/activity_para_teste2.xml" value="0.1358695652173913" />
         <entry key="..\:/Users/diego/CloneKotlin/Calling-Therapies/app/src/main/res/layout/activity_produto.xml" value="0.2" />
-        <entry key="..\:/Users/diego/CloneKotlin/Calling-Therapies/app/src/main/res/layout/activity_produto2.xml" value="0.5" />
+        <entry key="..\:/Users/diego/CloneKotlin/Calling-Therapies/app/src/main/res/layout/activity_produto2.xml" value="0.33" />
+        <entry key="..\:/Users/diego/CloneKotlin/Calling-Therapies/app/src/main/res/layout/activity_splash_screen.xml" value="0.12545289855072464" />
+        <entry key="..\:/Users/diego/CloneKotlin/Calling-Therapies/app/src/main/res/layout/activity_splash_screen2.xml" value="0.17527173913043478" />
         <entry key="..\:/Users/diego/CloneKotlin/Calling-Therapies/app/src/main/res/layout/activity_tela_home2.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/diego/CloneKotlin/Calling-Therapies/app/src/main/res/layout/activity_tela_inicial.xml" value="0.1" />
         <entry key="..\:/Users/diego/CloneKotlin/Calling-Therapies/app/src/main/res/layout/activity_tratamentos.xml" value="0.22" />
@@ -39,10 +42,13 @@
         <entry key="..\:/Users/diego/CloneKotlin/Calling-Therapies/app/src/main/res/layout/cardviwe.xml" value="0.25" />
         <entry key="..\:/Users/diego/CloneKotlin/Calling-Therapies/app/src/main/res/layout/fragment_mapa.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/diego/CloneKotlin/Calling-Therapies/app/src/main/res/layout/item_loading.xml" value="0.18854166666666666" />
+        <entry key="..\:/Users/diego/CloneKotlin/Calling-Therapies/app/src/main/res/layout/layout_descricao.xml" value="0.1" />
+        <entry key="..\:/Users/diego/CloneKotlin/Calling-Therapies/app/src/main/res/layout/layout_para_testar.xml" value="0.16" />
         <entry key="..\:/Users/diego/CloneKotlin/Calling-Therapies/app/src/main/res/layout/layoutcadastro.xml" value="0.25" />
         <entry key="..\:/Users/diego/CloneKotlin/Calling-Therapies/app/src/main/res/layout/lineartest.xml" value="0.1" />
         <entry key="..\:/Users/diego/CloneKotlin/Calling-Therapies/app/src/main/res/layout/login.xml" value="0.25" />
         <entry key="..\:/Users/diego/CloneKotlin/Calling-Therapies/app/src/main/res/layout/menu_lateral_cabecalho.xml" value="0.1" />
+        <entry key="..\:/Users/diego/CloneKotlin/Calling-Therapies/app/src/main/res/layout/outrotext.xml" value="0.1" />
         <entry key="..\:/Users/diego/CloneKotlin/Calling-Therapies/app/src/main/res/layout/tela_inicial2.xml" value="0.15" />
         <entry key="..\:/Users/diego/CloneKotlin/Calling-Therapies/app/src/main/res/layout/testando.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/diego/CloneKotlin/Calling-Therapies/app/src/main/res/layout/testandolayout.xml" value="0.1" />

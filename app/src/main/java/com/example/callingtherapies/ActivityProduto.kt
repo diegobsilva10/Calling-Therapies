@@ -67,9 +67,17 @@ class ActivityProduto : DebugActivity2(), NavigationView.OnNavigationItemSelecte
 
             runOnUiThread {
                 recyclerProdutos?.adapter = ProdutoAdapter(produtos) { onClickProduto(it) }
+                enviaNotificacao(this.produtos.get(0))
             }
 
         }.start()
+    }
+
+    fun enviaNotificacao(produto: Produto){
+        val intent = Intent (this, ProdutoActivity::class.java)
+        intent.putExtra("produto", produto)
+        NotificationUtil.create(1, intent, "Calling Therapies","Heeey, confere aqui uma novidade" )
+
     }
 
 
